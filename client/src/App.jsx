@@ -24,10 +24,10 @@ import AuthForm from "./components/common/formAuth";
 function App() {
   // const [count, setCount] = useState(0);
 
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   const user = {
     name: "Abdi",
-    role: null,
+    role: "admin",
   };
 
   return (
@@ -52,11 +52,16 @@ function App() {
               path="register"
               element={<AuthForm action="register" />}
             ></Route>
-            {/* <Route
-              path="/reset-password"
+            <Route
+              path="reset-password"
               element={<AuthForm action="resetPassword" />}
-            ></Route> */}
+            ></Route>
           </Route>
+          {/* Define reset-password as an independent route */}
+          {/* <Route path="/reset-password" element={<AuthForm action="resetPassword" />} /> */}
+
+            {/* Admin routes */}
+
           <Route
             path="/admin"
             element={
