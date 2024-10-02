@@ -19,6 +19,7 @@ import ShoppingHome from "./pages/shopping-view/home";
 import ShoppingCheckout from "./pages/shopping-view/checkout";
 import CheckAuth from "./components/common/check-auth";
 import UnauthPage from "./pages/unauth-page";
+import AuthForm from "./components/common/formAuth";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -44,8 +45,17 @@ function App() {
               </CheckAuth>
             }
           >
-            <Route path="login" element={<AuthLogin />}></Route>
-            <Route path="register" element={<AuthRegister />}></Route>
+            {/* <Route path="login" element={<AuthLogin />}></Route>
+            <Route path="register" element={<AuthRegister />}></Route> */}
+            <Route path="login" element={<AuthForm action="login" />}></Route>
+            <Route
+              path="register"
+              element={<AuthForm action="register" />}
+            ></Route>
+            {/* <Route
+              path="/reset-password"
+              element={<AuthForm action="resetPassword" />}
+            ></Route> */}
           </Route>
           <Route
             path="/admin"
