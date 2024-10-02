@@ -24,6 +24,7 @@ function CommonForm({ formControls, onSubmit }) {
       }, {})
     );
   
+
     const handleChange = (e) => {
       const { name, value } = e.target;
       setFormValues({

@@ -53,7 +53,7 @@ function App() {
               element={<AuthForm action="register" />}
             ></Route>
             <Route
-              path="reset-password"
+              path="resetpassword"
               element={<AuthForm action="resetPassword" />}
             ></Route>
           </Route>

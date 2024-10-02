@@ -23,6 +23,7 @@
 // ]
 
 // Form controls for registration
+
 export const registerFormControls = [
     {
       name: 'userName',
