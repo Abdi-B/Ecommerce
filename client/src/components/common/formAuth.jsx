@@ -78,12 +78,12 @@ function AuthForm({ action }) {
   }
 
   return (
-    <div className="auth-page">
+    <div className="auth-page w-2/3">
       <h1>
         {action === "register"
           ? "Create Account"
           : action === "login"
-          ? "Login"
+          ? "Log in to your account "
           : "Reset Password"}
       </h1>
 

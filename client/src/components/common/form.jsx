@@ -39,10 +39,10 @@ function CommonForm({ formControls, onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-full ">
         {formControls.map((control, index) => (
-          <div key={index} className="flex flex-col">
-            <label className="mb-2" htmlFor={control.name}>
+          <div key={index} className="flex flex-col w-full ">
+            <label className="mb-2 flex font-semibold " htmlFor={control.name}>
               {control.label}
             </label>
 
@@ -54,7 +54,7 @@ function CommonForm({ formControls, onSubmit }) {
                 placeholder={control.placeholder}
                 value={formValues[control.name]}
                 onChange={handleChange}
-                className="p-2 border border-gray-300 rounded"
+                className="p-2 border border-gray-300 rounded bg-blue-100 "
               />
             )}
 
