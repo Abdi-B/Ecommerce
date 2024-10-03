@@ -24,7 +24,7 @@ import AuthForm from "./components/common/formAuth";
 function App() {
   // const [count, setCount] = useState(0);
 
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   const user = {
     name: "Abdi",
     role: "admin",

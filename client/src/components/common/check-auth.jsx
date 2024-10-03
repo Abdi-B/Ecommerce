@@ -17,13 +17,13 @@ function CheckAuth({ isAuthenticated, user, children }) {
   }
 
   // Fix for reset-password route, checking if user role is admin or user
-  if (
-    isAuthenticated &&
-    (user?.role === "admin" || user?.role === "user") &&
-    location.pathname.includes("/resetpassword")
-  ) {
-    return <Navigate to="/auth/resetpassword" />;
-  }
+  // if (
+  //   !isAuthenticated &&
+  //   (user?.role === "admin" || user?.role === "user") &&
+  //   location.pathname.includes("/resetpassword")
+  // ) {
+  //   return <Navigate to="/auth/resetpassword" />;
+  // }
 
   // If authenticated and trying to access login or register routes
   if (
