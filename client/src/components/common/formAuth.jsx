@@ -88,7 +88,7 @@ function AuthForm({ action }) {
       </h1>
 
       {/* Render the form */}
-      <CommonForm formControls={formControls} onSubmit={handleSubmit} />
+      <CommonForm formControls={formControls} onSubmit={handleSubmit} action={action}/>
 
       {/* Add links based on the current form action */}
       {action === "login" && (

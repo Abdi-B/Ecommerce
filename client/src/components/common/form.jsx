@@ -15,7 +15,7 @@ import { useState } from "react";
 
 // export default Commonform;
 
-function CommonForm({ formControls, onSubmit }) {
+function CommonForm({ formControls, onSubmit, action }) {
   const [formValues, setFormValues] = useState(
     formControls.reduce((acc, control) => {
       acc[control.name] = "";
@@ -91,7 +91,14 @@ function CommonForm({ formControls, onSubmit }) {
           type="submit"
           className="mt-4 p-2 bg-blue-500 text-white rounded"
         >
-          Submit
+          {
+            action === 'login' 
+            ? 'Login' 
+            : action === 'register'
+            ? 'Sign up'
+            : 'Reset your password'
+          }
+          
         </button>
       </div>
     </form>
